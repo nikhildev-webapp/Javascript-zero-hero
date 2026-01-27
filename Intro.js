@@ -1,0 +1,46 @@
+console.log('Javascript Zero To Hero');
+console.log(`Goal-Learning javascript from scratch to get a mobile developer job(React Native)
+-Coding Task and Goals
+Learn by doing (Project Based Learning)
+Solve exercises
+Build projects 
+Learn TypeScript 
+Learn React.JS
+Learn React Native
+
+-JavaScript Basics Refresh
+Variables (let, const)
+Data types
+Operators
+Conditionals
+
+–Functions & Scope
+Function declarations vs expressions
+Arrow functions
+Scope & hoisting
+
+–Arrays & Objects
+Array methods (map, filter, reduce)
+Object destructuring
+Spread & rest operators
+
+–Asynchronous JavaScript
+Callbacks
+Promises
+async / await
+Error handling (try/catch)
+
+–ES6+ Features
+Template literals
+Optional chaining
+Default parameters
+Modules (import/export)
+
+–Practice Day
+Solve JS problems
+Small logic exercises
+
+–Review + Notes
+Revise weak areas
+Write your own JS cheat sheet
+`)
