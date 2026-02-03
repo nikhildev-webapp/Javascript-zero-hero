@@ -1,6 +1,6 @@
 //slecting the elements and changing the text content on button click
 
-const extElement = document.getElementById('text');
+const textElement = document.getElementById('text');
 const buttonElement = document.getElementById('change-text');
 
 if (buttonElement && textElement) {
