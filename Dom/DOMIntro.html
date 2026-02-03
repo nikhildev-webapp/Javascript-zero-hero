@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-DOM</title>
+</head>
+<body>
+    <h1>Javascript-DOM</h1>
+
+    <section id="definition">
+        <h2>What is the DOM?</h2>
+        <p>The <strong>Document Object Model (DOM)</strong> is a programming interface for HTML and XML documents. It represents the page as a hierarchical tree of nodes so scripts can read and modify the document structure, style, and content.</p>
+    </section>
+
+    <section id="working-tree">
+        <h2>DOM Working Tree</h2>
+        <p>Interactive textual view of this page's DOM tree. Click <strong>Refresh Tree</strong> to rebuild.</p>
+        <pre id="dom-tree" style="background:#f6f8fa;border:1px solid #ddd;padding:10px;white-space:pre-wrap;font-family:monospace;"></pre>
+        <p><button id="refresh">Refresh Tree</button></p>
+    </section>
+
+    <script>
+        // Small utility to create a readable DOM tree
+        function nodeName(n){ return n.nodeName.toLowerCase() + (n.id ? '#' + n.id : ''); }
+
+        function buildTree(node, indent = ''){
+            let s = indent + nodeName(node) + '\n';
+            let children = Array.from(node.children);
+            children.forEach((child, i) => {
+                let last = i === children.length - 1;
+                s += buildTree(child, indent + (last ? '└─ ' : '├─ '));
+            });
+            return s;
+        }
+
+        function refresh(){
+            let tree = 'document\n' + buildTree(document.documentElement, '');
+            document.getElementById('dom-tree').textContent = tree;
+        }
+
+        document.getElementById('refresh').addEventListener('click', refresh);
+        // initial render
+        refresh();
+    </script>
+</body>
+</html>

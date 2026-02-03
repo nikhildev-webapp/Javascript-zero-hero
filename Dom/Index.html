@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        /* Small styles for examples */
+        .card { border:1px solid #ccc; padding:10px; margin:8px 0; border-radius:4px; background:#fff; }
+        .card .card-controls button { margin-right:6px; }
+        .highlight { background: #fffbcc; border-color: #f0e68c; }
+        #cards { margin-top:8px; }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <section id="manipulation-example">
+        <h2>Example: Change Content</h2>
+        <p id="text">This is the original text.</p>
+        <button id="change-text">Change Text</button>
+    </section>
+    <section>
+        <p id="html-content">changing html content</p>
+        <button id="change-html">Change HTML Content</button>
+    </section>
+    <section id="password-example">
+        <h2>Password: Show/Hide</h2>
+        <label for="password">Password:</label>
+        <input id="password" type="password" value="secret123" />
+        <button id="toggle-password" aria-pressed="false">Show</button>
+    </section>
+
+    <section id="dynamic-list">
+        <h2>Dynamic List</h2>
+        <label for="new-item">Add item:</label>
+        <input id="new-item" type="text" placeholder="Enter item" />
+        <button id="add-item">Save</button>
+        <ul id="items-list" aria-live="polite"></ul>
+    </section>
+
+    <section id="advanced-dom">
+        <h2>Advanced DOM Manipulation</h2>
+        <div id="card-form">
+            <label for="card-title">Title:</label>
+            <input id="card-title" type="text" placeholder="Card title" />
+            <label for="card-desc">Description:</label>
+            <input id="card-desc" type="text" placeholder="Short description" />
+            <button id="add-card">Add Card</button>
+        </div>
+        <div id="cards" aria-live="polite"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
