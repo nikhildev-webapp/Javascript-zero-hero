@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="Container">
+        <h1>Todo-List</h1>      
+    </div>
+   
+    <div class="todoContainer">
+        <h3>Create Todo List</h3>
+        <label>Todo:</label>
+        <input type="text" id="textInput" placeholder="Enter todos here...">
+        <button id="btn" onclick="SaveTodo()">Save Todo</button>
+    </div>
+    <div id="todosList">
+        <h3>Your Task List:</h3>
+        <ul>
+            <li id="taskList"></li>
+        </ul>
+    </div>
     <script src="App.js"></script>
 </body>
 </html>
