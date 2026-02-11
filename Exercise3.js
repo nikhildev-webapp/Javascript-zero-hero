@@ -50,4 +50,33 @@ const ArraySum = numberArray.reduce((i, s) => { return i + s; });
 console.log('Sum of the array is:', ArraySum);
 
 //Topic-Chaining + Map
-console.log('Chainig is a common functional programming pattern used to tra')
+console.log('Chainig is a common functional programming pattern used to trasform and clean data in a single readable pipeline:');
+console.log('chaining Example:');
+const products = [
+    {name:'laptop',price:1000,inStock:true},
+    {name:'Phone',price:1000,inStock:false},
+    {name:'Tablet',price:1000,inStock:true},
+]
+
+const saleItems = products.filter(p => p.inStock).map(p => `${p.name}:${p.price * 0.9}`);
+console.log(saleItems);
+
+//question four
+console.log('Remove the Duplicate items from array');
+const mixedArray = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 8];
+console.log('Mixed array befor remove duplicate item', mixedArray);
+const uniqueArray = [...new Set(mixedArray)]
+console.log('Array after remove duplicate item', uniqueArray);
+
+//question five
+console.log('Flatten a nested array');
+const nestedArray = [1, [2, [3, [4]]]];
+console.log('Nested array ', nestedArray);
+const FlattenArray = nestedArray.flat(Infinity);
+console.log("FlattenArray", FlattenArray)
+
+//question six
+console.log('Write the callback function run after 2 seconds');
+setTimeout(() => {
+   console.log('2 second pass') 
+}, 2000);
